@@ -109,3 +109,5 @@ Municipality input is length-validated rather than checked against a comprehensi
 - [Verification](docs/verification.md)
 - [Architecture diagram](docs/architecture.svg)
 - [Portfolio case study](https://mohamed-abderrehmane-portfolio.hillock-factual9mupt.chatgpt.site/projects/flashdrop-cod/)
+
+- [Engineering details and implementation lessons](docs/engineering-notes.md)
