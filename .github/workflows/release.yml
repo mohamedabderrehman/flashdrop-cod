@@ -12,3 +12,7 @@ jobs:
           php-version: '8.4'
           extensions: mysqli, pdo_sqlite, sqlite3, curl, fileinfo, mbstring, redis
       - run: python tools/check-syntax.py
+      - run: |
+          php -S 127.0.0.1:8084 > /tmp/demo.log 2>&1 &
+          sleep 2
+          python tools/check-demo.py

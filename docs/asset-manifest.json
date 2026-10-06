@@ -1,0 +1,42 @@
+[
+  {
+    "path": "1.jpg",
+    "sha256": "3550923406d3d1cdffbf44df9c9c0db165e79f68e2d24e737e3428f7994fa5ae",
+    "scope": "Original supplied application asset; third-party rights are separate from source MIT"
+  },
+  {
+    "path": "2.jpg",
+    "sha256": "8fb813f45f39fa06fa9f4b0b0951be2f353f9a4d88c49a6c00574acb3f4ba4e0",
+    "scope": "Original supplied application asset; third-party rights are separate from source MIT"
+  },
+  {
+    "path": "3.jpg",
+    "sha256": "cee459c0532dd3e714908421523966f0b73bc7d5cef38084778ba6f67a87a8c9",
+    "scope": "Original supplied application asset; third-party rights are separate from source MIT"
+  },
+  {
+    "path": "4.jpg",
+    "sha256": "506abbd539fb5f51f93700e5fc37a62574cf35baa8786c5ceedca02d7f2c8965",
+    "scope": "Original supplied application asset; third-party rights are separate from source MIT"
+  },
+  {
+    "path": "5.jpg",
+    "sha256": "c338147c372f0467eea2b5f05e466cb758e338c609392a5dc66a1f9bc3930983",
+    "scope": "Original supplied application asset; third-party rights are separate from source MIT"
+  },
+  {
+    "path": "docs/architecture.svg",
+    "sha256": "92fc54f644ed0a02d7724678ef0311355a294545b5f23053bc886795858eabce",
+    "scope": "Actual synthetic application capture"
+  },
+  {
+    "path": "docs/screenshots/desktop.jpg",
+    "sha256": "f7358b68826cc6fd493c0931e880583ea89d856f6194e634e2846905665ff1a4",
+    "scope": "Actual synthetic application capture"
+  },
+  {
+    "path": "docs/screenshots/mobile.jpg",
+    "sha256": "302b62b33d230d554d07a41ce0a4c0a14cdc84dbcaa4157515699c27c7680e04",
+    "scope": "Actual synthetic application capture"
+  }
+]

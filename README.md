@@ -90,3 +90,22 @@ Open an issue describing a reproducible problem, expected behavior and component
 ## License and attribution
 
 Source code is MIT licensed. Third-party dependencies and assets retain their own terms; see [attribution](THIRD_PARTY_NOTICES.md).
+
+<!-- release-presentation -->
+
+## Actual application interface
+
+![Flashdrop — interface with synthetic demonstration data](docs/screenshots/desktop.jpg)
+
+Captured from the local application with synthetic records. This does not establish production usage or Android device verification.
+
+## Verification and deeper reading
+
+PHP syntax and synthetic HTTP checks passed: valid receipt, repeated idempotency key returns the same receipt, changed-payload conflict, phone/quantity/options validation and foreign-origin rejection. Browser assets contain no Telegram bot token. Live Telegram delivery is not asserted.
+
+Municipality input is length-validated rather than checked against a comprehensive administrative dataset. Uncertain live sends require operator reconciliation; do not retry with a new key blindly. Offers, stock and reviews in the demonstration are presentation content.
+
+- [Case study](docs/case-study.md)
+- [Verification](docs/verification.md)
+- [Architecture diagram](docs/architecture.svg)
+- [Portfolio case study](https://mohamed-abderrehmane-portfolio.wry-dog-0796.chatgpt.site/projects/flashdrop-cod/)

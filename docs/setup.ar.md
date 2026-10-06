@@ -1,20 +1,32 @@
-# الإعداد
+# الإعداد الكامل
 
-استخدم PHP 8.1 أو أحدث مع cURL للإرسال الفعلي. وضع العرض افتراضي: `php -S 127.0.0.1:8084`. يقرأ PHP متغيرات البيئة المصدرة ولا يقرأ `.env` تلقائياً. للإرسال اضبط `DEMO_MODE=0` والتوكن ومعرف المحادثة ومجلد حالة خارج الجذر العام.
+يلزم PHP 8.1 أو أحدث وcURL لنداءات Telegram الحية. وضع العرض الافتراضي 1 لا يحتاج مفتاحاً. للوضع الحي صدّر DEMO_MODE=0 وTELEGRAM_BOT_TOKEN وTELEGRAM_CHAT_ID في الخادم واجعل ORDER_STATE_DIR خارج المجلد العام قابلاً لكتابة الخدمة فقط. استخدم خيارات api/options.json ومفتاح منع تكرار جديداً لكل طلب مختلف.
 
-## التفاصيل والأوامر
+## الأوامر
 
-Use PHP 8.1+ with cURL for live delivery. Demo mode is the default: run `php -S 127.0.0.1:8084`. PHP reads exported environment variables, not `.env` automatically. For live operation set `DEMO_MODE=0`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` and an `ORDER_STATE_DIR` outside the web root. Preserve TLS validation and store secrets through the hosting environment.
+```sh
+php -S 127.0.0.1:8084
+# Separate terminal:
+python tools/check-syntax.py
+python tools/check-demo.py
+```
 
-## متغيرات تقرأها الشيفرة
+## جرد الإعداد
 
-| Variable | Source consumer | Configuration rule |
+| المتغير | موضع الاستخدام | قاعدة الإعداد |
 |---|---|---|
-| `DEMO_MODE` | `api/order.php` | Use the local example/source default; adapt to your disposable environment. |
-| `ORDER_STATE_DIR` | `api/order.php` | Use the local example/source default; adapt to your disposable environment. |
-| `TELEGRAM_BOT_TOKEN` | `api/order.php` | Supply privately when enabling its integration; no secret default. |
-| `TELEGRAM_CHAT_ID` | `api/order.php` | Use the local example/source default; adapt to your disposable environment. |
+| `DEMO_MODE` | `api/order.php` | استخدم المثال المحلي أو افتراضي الشيفرة واضبطه للبيئة المؤقتة. |
+| `ORDER_STATE_DIR` | `api/order.php` | استخدم المثال المحلي أو افتراضي الشيفرة واضبطه للبيئة المؤقتة. |
+| `TELEGRAM_BOT_TOKEN` | `api/order.php` | قدم القيمة بصورة خاصة عند تفعيل التكامل، دون سر افتراضي. |
+| `TELEGRAM_CHAT_ID` | `api/order.php` | استخدم المثال المحلي أو افتراضي الشيفرة واضبطه للبيئة المؤقتة. |
 
-لا تُحمَّل ملفات الأمثلة تلقائياً. تستخدم وحدات dotenv الملف حيث تكون مهيأة، ويستخدم PHP بيئة العملية أو الاستضافة. افصل المزودين عن العرض وأنشئ أسراراً جديدة واحفظها خارج المستودع.
+ليست كل متغيرات الجرد إلزامية. تحدد الفقرة الأولى قيم التشغيل الأساسية، وتلزم قيم المزود للتكامل الحي المفعل فقط. تتجاوز DEMO_API_URL هدف الفحص المحلي عند دعمه. لا توجه أوامر التعبئة والاستعادة والفحص لقاعدة إنتاج. لا تُحمّل أمثلة البيئة نفسها تلقائياً؛ جهز بيئة العملية أو dotenv حيث يستخدمه المكون.
 
-## أوامر المكونات
+## المكونات
+
+| المكون | المسؤولية |
+|---|---|
+| `index.html` | صفحة المنتج ونموذج الطلب |
+| `api/order.php` | الفحص ومنع التكرار وحدود المزود |
+| `api/options.json` | خيارات الطلب المسموح بها |
+| `1.jpg … 5.jpg` | صور المنتج الموجودة |

@@ -1,4 +1,17 @@
-# Setup and configuration
+# Clean setup
+
+PHP 8.1+ with cURL is required for live Telegram calls. Demo mode defaults to 1 and needs no provider key. For live mode export DEMO_MODE=0, TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID server-side; keep ORDER_STATE_DIR outside the public document root and writable only by the service. Use the options in api/options.json and a fresh idempotency key per distinct order.
+
+## Commands
+
+```sh
+php -S 127.0.0.1:8084
+# Separate terminal:
+python tools/check-syntax.py
+python tools/check-demo.py
+```
+
+## Complete configuration inventory
 
 Use PHP 8.1+ with cURL for live delivery. Demo mode is the default: run `php -S 127.0.0.1:8084`. PHP reads exported environment variables, not `.env` automatically. For live operation set `DEMO_MODE=0`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` and an `ORDER_STATE_DIR` outside the web root. Preserve TLS validation and store secrets through the hosting environment.
 
@@ -25,3 +38,6 @@ Environment examples do not load themselves. Node dotenv modules read local `.en
 | `api/order.php` | Validation, idempotency and provider boundary |
 | `api/options.json` | Allowed existing order options |
 | `1.jpg … 5.jpg` | Existing product imagery |
+
+
+Variables in the inventory are not all mandatory: the preceding prerequisites identify the required core values. Provider variables are required only for their enabled live integration. Tests may use DEMO_API_URL to override the local target. Never point bootstrap/reset/check scripts at a production database.
