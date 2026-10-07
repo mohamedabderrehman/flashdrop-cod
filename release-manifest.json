@@ -181,13 +181,13 @@
   },
   {
     "path": "docs/verification.ar.md",
-    "bytes": 1637,
-    "sha256": "85ba8f53633d66deef266a0e088d28989adfcfa83511edaa17bfdd810518b98f"
+    "bytes": 1652,
+    "sha256": "145356f32494b7e64a3adf539dec2dfc96f8da56b3125699ccbd110c087a65d3"
   },
   {
     "path": "docs/verification.md",
-    "bytes": 1458,
-    "sha256": "219e091e3c1c53e46afbd9fdbb62ad4b2b94b763da35bc53355513c3fed2294c"
+    "bytes": 1477,
+    "sha256": "f573bc32cef0d0545011f36d2b4f8b2c5beb702ed06f3ad98381decb2a088148"
   },
   {
     "path": "index.html",
